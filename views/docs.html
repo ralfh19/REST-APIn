@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,187 @@
     <link href="https://inirey.github.io/lolhuman/css/default.css" rel="stylesheet">
     <link href="https://inirey.github.io/lolhuman/css/style.css" rel="stylesheet">
    
+   <style>
+.bg-orange {
+      background-color: #c3cf0f;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(%, #ffa426), to(#dda20a));
+  
+}
+
+.border-right-warning {
+  border-right: .25rem solid #ffeb3b !important
+}
+
+.border-top-warning {
+  border-top: .25rem solid #ffeb3b !important
+}
+
+.animated {
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #FF0000;
+	-webkit-animation: animatedBackground_c 2s infinite alternate;
+}
+@keyframes animatedBackground_c {
+	0% {-webkit-text-stroke-color: #ff8b00}
+	10% {-webkit-text-stroke-color: #e8ff00}
+	20% {-webkit-text-stroke-color: #5dff00}
+	30% {-webkit-text-stroke-color: #00ff2e}
+	40% {-webkit-text-stroke-color: #00ffb9}
+	50% {-webkit-text-stroke-color: #00b9ff}
+	60% {-webkit-text-stroke-color: #002eff}
+	70% {-webkit-text-stroke-color: #5d00ff}
+	80% {-webkit-text-stroke-color: #e800ff}
+	90% {-webkit-text-stroke-color: #ff008b}
+	100% {-webkit-text-stroke-color: #ff0000}
+}
+
+
+
+  h7, .h7 {
+  font-size: 0.7rem; }
+  
+  .font-gg {
+  	font-size: 40px
+  }
+
+
+
+.bg-gray-dark {
+  background: #e3eaef; }
+  
+   
+
+
+
+
+.container1 {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h11 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+h21 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.play-area {
+	background-color: #e3eaef;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #0ff30f;
+}
+
+.win:hover {
+  background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+button1 {
+  outline: none;
+  border: 4px solid green;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button1:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.playerWin {
+  color: blue;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h11 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  h21 {
+    margin-top: 1em;
+    font-size: 1.3rem;
+  }
+}
+
+</style>
+   
 </head>
+
 
 <body id="page-top" class="dark-mode">
     <div id="wrapper">
@@ -264,7 +445,7 @@
                     <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header">primbon Api</h6>              
                         <a class="collapse-item" target="_blank" href="/api/primbon/artimimpi?text=bangkrut&apikey=VynnsHome" target="_blank" >Arti mimpi</a>
-                        <a class="collapse-item" target="_blank" href="/api/primbon/artinama?text=Vynns&apikey=VynnsHome" target="_blank" >Arti nama</a>
+                        <a class="collapse-item" target="_blank" href="/api/primbon/artinama?text=Rey&apikey=VynnsHome" target="_blank" >Arti nama</a>
                   </div>
                 </div>
             </li>
@@ -427,9 +608,9 @@
                 <div id="collapseSticker" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sticker</h6>
-                        <a class="collapse-item" target="_blank" href="/api/maker/ttp?text=Vynns&apikey=VynnsHome" target="_blank" >TTP maker</a>
-                        <a class="collapse-item" target="_blank" href="/api/maker/attp?text=Vynns&apikey=VynnsHome" target="_blank" >ATTP MAKER</a>
-                        <a class="collapse-item" target="_blank" href="/api/canvas/welcome?username=Vynns&memberCount=257&gcname=Vynns Home&bg=&pp=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&pp=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&gcicon=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&apikey=VynnsHome" target="_blank" >Welcome Canvas</a>
+                        <a class="collapse-item" target="_blank" href="/api/maker/ttp?text=Rey&apikey=VynnsHome" target="_blank" >TTP maker</a>
+                        <a class="collapse-item" target="_blank" href="/api/maker/attp?text=Rey&apikey=VynnsHome" target="_blank" >ATTP MAKER</a>
+                        <a class="collapse-item" target="_blank" href="/api/canvas/welcome?username=Reyganz&memberCount=257&gcname=Whatsapp Bot Nodejs&bg=&pp=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&pp=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&gcicon=https://avatars.githubusercontent.com/u/85196372?s=400&u=7ccec6bcffa37e5c4517d9ed53698944070b7063&v=4.jpg&apikey=VynnsHome" target="_blank" >Welcome Canvas</a>
                   </div>
                 </div>
             </li>
@@ -510,50 +691,29 @@
     
                     <div class="card-body mb-3">
                         
-                            <li>Hi World, Welcome To Vynn's Home, Web Ini Dibuat Untuk Informasi Seputar Ilulu Bot. Di Web Ini Juga Terdapat Rest Api Yg Bisa Kalian Gunakan Secara Gratis>_<. Jika Terdapat Bug/Fitur Yg Eror Silahkan Hubungi Developer, Arigato Gozaimasu 🇲🇨</li>
+                            <li>Hi World, Welcome To Vynn's Home, Web Ini Dibuat Untuk Informasi Seputar Ilulu Bot. Di Web Ini Juga Terdapat Rest Api Yg Bisa Kalian Gunakan Secara Gratis>_<. Jika Terdapat Bug/Fitur Yg Eror Silahkan Hubungi Developer, Arigato Gozaimasu 🇮🇩</li>
                       
                     </div>
                                     </div>
                                     <div class="col-auto">
                                     </div>
-                                </div>
-                            </div>
+                               
+        
                         </div>
+<div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title text-center">TicTacToe</h4>
+                    <h6 class="card-title text-center">Menangkan Untuk Mendapatkan Apikey</h6>
+                    <hr>
+          <div class="container1">
+        <div class="play-area">
+        </div>
+        <h21 class="text-center" id="winner"></h21>
+        <button1 onclick="reset_board()">REPEAT</button1>
+    </div>
+    
 
-                        <div class="row mb-3">
-                        <!-- Earnings (Annual) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card h-50">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Apikey:</div>
-                                            <div class="h5 mb-0 font-weight-bold">VynnsHome</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-user faa-ring animated fa-2x text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card h-50">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold">8372</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar faa-wrench animated fa-2x text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!--Row-->
                     <div class="row">
                         <div class="col-lg-12 text-center">
@@ -567,17 +727,7 @@
                 </div>
                 <!---Container Fluid-->
             </div>
-            <!-- Footer -->
-            <footer class="sticky-footer">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        Made with <i class="fa fa-heart faa-flash animated"></i> by
-                        <a href="https://github.com/inirey" target="_blank" style="color: #fff;">Vynns</a>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer -->
+            
         </div>
     </div>
 
@@ -603,6 +753,133 @@ Swal.fire({
     <script src="https://inirey.github.io/lolhuman/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://inirey.github.io/lolhuman/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="https://inirey.github.io/lolhuman/js/ruang-admin.min.js"></script>
+    
+    <script>
+                	const player = "O";
+const computer = "X";
+
+let board_full = false;
+let play_board = ["", "", "", "", "", "", "", "", ""];
+
+const board_container = document.querySelector(".play-area");
+
+const winner_statement = document.getElementById("winner");
+
+check_board_complete = () => {
+  let flag = true;
+  play_board.forEach(element => {
+    if (element != player && element != computer) {
+      flag = false;
+    }
+  });
+  board_full = flag;
+};
+
+
+const check_line = (a, b, c) => {
+  return (
+    play_board[a] == play_board[b] &&
+    play_board[b] == play_board[c] &&
+    (play_board[a] == player || play_board[a] == computer)
+  );
+};
+
+const check_match = () => {
+  for (i = 0; i < 9; i += 3) {
+    if (check_line(i, i + 1, i + 2)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 1}`).classList.add("win");
+      document.querySelector(`#block_${i + 2}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    if (check_line(i, i + 3, i + 6)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 3}`).classList.add("win");
+      document.querySelector(`#block_${i + 6}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  if (check_line(0, 4, 8)) {
+    document.querySelector("#block_0").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_8").classList.add("win");
+    return play_board[0];
+  }
+  if (check_line(2, 4, 6)) {
+    document.querySelector("#block_2").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_6").classList.add("win");
+    return play_board[2];
+  }
+  return "";
+};
+
+const check_for_winner = () => {
+  let res = check_match()
+  if (res == player) {
+    winner.innerText = "You Win Apikey: VynnsHome";
+    winner.classList.add("playerWin");
+    board_full = true
+  } else if (res == computer) {
+    winner.innerText = "Awokawok Kalah Ama Komputer:v";
+    winner.classList.add("computerWin");
+    board_full = true
+  } else if (board_full) {
+    winner.innerText = "Draw!";
+    winner.classList.add("draw");
+  }
+};
+
+
+const render_board = () => {
+  board_container.innerHTML = ""
+  play_board.forEach((e, i) => {
+    board_container.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`
+    if (e == player || e == computer) {
+      document.querySelector(`#block_${i}`).classList.add("occupied");
+    }
+  });
+};
+
+const game_loop = () => {
+  render_board();
+  check_board_complete();
+  check_for_winner();
+}
+
+const addPlayerMove = e => {
+  if (!board_full && play_board[e] == "") {
+    play_board[e] = player;
+    game_loop();
+    addComputerMove();
+  }
+};
+
+const addComputerMove = () => {
+  if (!board_full) {
+    do {
+      selected = Math.floor(Math.random() * 9);
+    } while (play_board[selected] != "");
+    play_board[selected] = computer;
+    game_loop();
+  }
+};
+
+const reset_board = () => {
+  play_board = ["", "", "", "", "", "", "", "", ""];
+  board_full = false;
+  winner.classList.remove("playerWin");
+  winner.classList.remove("computerWin");
+  winner.classList.remove("draw");
+  winner.innerText = "";
+  render_board();
+};
+
+//initial render
+render_board();
+</script>
 </body>
 
 </html>
