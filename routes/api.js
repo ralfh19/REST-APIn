@@ -4919,8 +4919,11 @@ router.get("/photooxy/shadow", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pShadow(text1)
-    .then((data) => {
+  zrapi
+  .photooxy(
+    "https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html",
+    [teks1]
+  ).then((data) => {
       const result = {
         status: true,
         code: 200,
