@@ -4927,8 +4927,9 @@ router.get("/photooxy/shadow", async(req, res, next) => {
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
-        result: data.url
+        creator: `${creator}`
+	result: `${data.url}`,
+        
       }
       res.json(result)
     })
