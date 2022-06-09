@@ -4913,23 +4913,20 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
 
 
 
+
 router.get("/photooxy/shadow", async(req, res, next) => {
   const text1 = req.query.text;
   const apikey = req.query.apikey;
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  zrapi
-  .photooxy(
-    "https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html",
-    [teks1]
-  ).then((data) => {
+  pShadow(text1)
+    .then((data) => {
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`
-	result: `${data.url}`,
-        
+        creator: `${creator}`,
+        result: data.url
       }
       res.json(result)
     })
