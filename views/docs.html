@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -204,14 +206,14 @@ button1:hover {
     <div id="wrapper">
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <i class="fas fa-fw fa-code fa-2x"></i>
                 <div class="sidebar-brand-text mx-3">Vynns Home</div>
                 <audio autoplay="autoplay" hidden="hidden" src="https://a.uguu.se/xlrtmTyK.mp3"></audio>
             </a>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-thermometer-three-quarters"></i>
                     <span>Statistic</span></a>
             </li>
@@ -622,13 +624,31 @@ button1:hover {
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <!-- TopBar -->
-                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
           <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="navbar-search" method="get" action="https://id.pinterest.com/search/pins/?rs=typed&">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?" 
+                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;" name="q" required autofocus>
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="submit" value="Google search">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
@@ -652,6 +672,7 @@ button1:hover {
                     <span class="font-weight-bold">Website dibuat</span>
                   </div>
                 </a>
+                
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="mr-3">
                     <div class="icon-circle bg-success">
@@ -700,6 +721,7 @@ button1:hover {
                     <div class="small text-gray-500">Vynns</div>
                   </div>
                 </a>
+                
 
                   
                 </a>
