@@ -7030,9 +7030,9 @@ router.get('/maker/ttp', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   
   if(listkey.includes(apikey)) {
-  let hasil = 'https://h4ck3rs404-api.herokuapp.com/api/ttp?text='+ text +'&apikey=404Api'
-  data = await fetch(hasil).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/ttp.png', data)
+	             var text2png = require('text2png');
+mclor = text.split("|")[1] ? text.split("|")[1] : "white"
+fs.writeFileSync(__path +'/tmp/ttp.png', text2png(text.split("|")[0] ? text.split("|")[0] : text, {font:" 100px Etna-sans-serif", lineSpacing: 10, padding: 20, color: mclor, strokeWidth: 4, strokeColor: mclor}))
   res.sendFile(__path +'/tmp/ttp.png')
   } else {
     res.json(loghandler.invalidKey)
