@@ -7022,22 +7022,6 @@ router.get("/maker/nulis", async (req, res, next) => {
   }
 })
 
-router.get('/maker/ttp', async(req, res, next) => {
-
-  const text = req.query.text;
-  const apikey = req.query.apikey;
-  if(!text) return res.json(loghandler.nottext)
-  if(!apikey) return res.json(loghandler.notparam)
-  
-  if(listkey.includes(apikey)) {
-	             var text2png = require('text2png');
-mclor = text.split("|")[1] ? text.split("|")[1] : "white"
-fs.writeFileSync(__path +'/tmp/ttp.png', text2png(text.split("|")[0] ? text.split("|")[0] : text, {font:" 100px Etna-sans-serif", lineSpacing: 10, padding: 20, color: mclor, strokeWidth: 4, strokeColor: mclor}))
-  res.sendFile(__path +'/tmp/ttp.png')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
 
 router.get('/maker/attp', async(req, res, next) => {
 
