@@ -16,6 +16,7 @@ var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
+var ch = require('hikki-me');
 var request = require('request');
 var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
@@ -7294,30 +7295,34 @@ router.get('/maker/skatch', async(req, res, next) => {
     res.json(loghandler.invalidKey)
   }
 });
-router.get('/canvas/welcome', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const username = req.query.username;
-  const memberCount = req.query.memberCount;
-  const gcname = req.query.gcname;
-  const bg = req.query.bg;
-  const pp = req.query.pp;
-  const gcicon = req.query.gcicon;
-  if(!username) return res.json(loghandler.notusername)
-  if(!memberCount) return res.json(loghandler.memberCount)
-  if(!gcname) return res.json(loghandler.gcname)
-  if(!bg) return res.json(loghandler.bg)
-  if(!pp) return res.json(loghandler.pp)
-  if(!gcicon) return res.json(loghandler.gcicon)
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
-  let hasil = `https://hadi-api.herokuapp.com/api/card/welcome3?username=${username}&memberCount=${memberCount}&bg=${bg}&pp=${pp}&gcicon=${gcicon}`
-  data = await fetch(hasil).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/welcome.png', data)
-        res.sendFile(__path+'/tmp/welcome.png')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-});
+router.get('/canvas/welcome', async (req, res) => {
+            pp = req.query.pp,
+            nama = req.query.nama,
+            bg = req.query.bg,    
+	    namagc = req.query.namagc,
+            member = req.query.member
+    if (!pp) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter pp"})
+    if (!nama) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nama"})
+    if (!bg) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter bg"})
+    if (!namagc) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter namagc"})
+    if (!member) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter member"})
+    
+    
+let Welcome = await new ch.Welcome2()
+.setAvatar(pp)
+.setUsername(nama)
+.setBg(bg)
+.setGroupname(namagc)
+.setMember(member)
+.toAttachment()
+    
+ data = Welcome.toBuffer();
+  await fs.writeFileSync(__path +'/database/welcome.png', data)
+  res.sendFile(__path+'/database/welcome.png')
+  .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 router.get('/maker/tololserti', async(req, res, next) => {
   const apikey = req.query.apikey;
   const url = req.query.url;
